@@ -5,20 +5,25 @@
     margin: 0 auto;
 }
 
-body{
-    font-family: Avenir, '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
-    font-size: 1em;
-    line-height: 1;
-    vertical-align: baseline;
+html{
+    display: block;
 }
 
-#starbucks{
-    border: 2px solid #000;
+body{
+    font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1;
+    vertical-align: baseline;
+    overflow-x: hidden;
 }
 
 a{
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     color: #555;
+    cursor: pointer;
 }
 
 ul{
@@ -26,14 +31,33 @@ ul{
     padding-left: 0;
 }
 
+div{
+    display: block;
+}
+
 img{
     vertical-align: top;
     max-width: 100%;
 }
 
+#starbucks{
+    position: relative;
+    width: 100%;
+}
+
 /* Header */
+
+.tablet_wrap{
+    display: none;
+}
+
+.blankWrap{
+    height: 120px;
+}
+
 .header_wrap{
-    position: sticky;
+    display: block;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -56,7 +80,6 @@ img{
     transform: translate(0, -50%);
     width: 75px;
     height: 75px;
-    
 }
 
 .logo>a{
@@ -107,6 +130,7 @@ img{
     top: 54px;
     height: 66px;
     width: 100%;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .sub_gnb_inner{
@@ -260,37 +284,297 @@ img{
 .main_wrap{
     width: 100%;
     height: 645px;
-    background: url('../img/main_visual_bg.jpg') no-repeat;
-
+    background: url('../img/main_visual_bg.jpg') no-repeat center / cover;
 }
 
 .main_inner{
     position: relative;
+    width: 100%;
     max-width: 1080px;
     height: 100%;
-    padding-top: 60px;
+    padding-top: 65px;
 }
 
 .main_slogan{
-    max-width: 463px;
+    position: relative;
+    display: block;
+    max-width: 47%;;
     margin-left: -4px;
 }
 
 .slogan_btn{
+    position: absolute;
     display: inline-block;
-    border: 1px solid #EA784C;
-    border-radius: 5px;
-    text-align: center;
+    left: 15.5%;
+    margin-top: 21px;
     width: 125px;
     height: 40px;
+    text-align: center;  
+    z-index: 20;
 }
 
 .slogan_btn>a{
+    display: inline-block;
+    border: 2px solid #EA784C;
+    border-radius: 5px;
     width: 100%;
     height: 100%;
     color: #EA784C;
-    font-size: 15px;
-    vertical-align: ;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 35px; 
+    transition: 0.3s ease;
+}
+
+.slogan_btn>a:hover{
+    background: #EA784C;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.set_common {
+    position: absolute;
+    font-size: 0;
+}
+
+.set_common::after, .set_common::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    z-index: 10;
+}
+
+.set_01::after{
+    background-image: url('../img/main_visual_latte_tit.png');
+    bottom: -17.2%;
+    left: 27%;
+    width: 50%;
+    max-width: 213px;
+    height: 50px;
+    
+}
+
+.set_02::after{
+    bottom: -25.4%;
+    left: 37%;
+    width: 51%;
+    max-width: 221px;
+    height: 95px;
+    background-image: url('../img/main_visual_frappuccino_tit.png');
+}
+
+.set_03::after{
+    bottom: -9%;
+    left: 42%;
+    width: 51%;
+    max-width: 208px;
+    height: 73px;
+    background-image: url('../img/main_visual_lemonade_tit.png');
+}
+
+.set_03::before{
+    right: 8%;
+    top: 10%;
+    width: 82px;
+    height: 82px;
+    background-image: url('../img/soldout_iconpng.png');
+    background-size: cover;
+    z-index: 0;
+}
+
+.set_common a{
+    position: absolute;
+}
+
+.set_01{
+    position: absolute;
+    width: 40%;
+    max-width: 432px;
+    z-index: 15;
+
+    bottom: 17.5%; left: 17.8%;
+}
+
+.set_02{
+    width: 41%;
+    max-width: 434px;
+    z-index: 13;
+
+    bottom: 29.5%; left: 37.5%;
+}
+
+.set_03{
+    width: 39%;
+    max-width: 414px;
+    z-index: 11;
+
+    bottom: 12.5%; right: 0.5%;
+}
+
+.set_01 > a{
+    width: 60%;
+    height: 96%;
+
+    top: 0; left: 22%;
+}
+
+.set_02 > a{
+    width: 40%;
+    height: 94%;
+    z-index: 11;
+
+    top: 0; left: 44%;
+}
+
+.set_03 > a{
+    width: 45%;
+    height: 84%;
+
+    top: 0; left: 47%;
+}
+
+@media screen and (max-width: 1130px){
+
+    .main_slogan{ width: 46%; margin-left: 20px; 
+    }
+    .main_inner{
+        padding-top: 5%;
+    }
+    .slogan_btn{
+        left: 10%;
+    }
+
+    .set_01{ left: 13%;}
+    .set_02{ bottom: 27.5%; left: 32.5%;}
+    .set_03{ right: 6.5%; }
+
+}
+
+@media screen and (max-width: 960px){
+    .set_01 { left:10%; width:40%; }
+    .set_02 { left:30%; width:40%; }
+    .set_03 { right:9.5%; width:38%; }
+    .set_01:after { width:48% }
+    .set_02:after { width:49%; }
+    .set_03:after { left:41%; width:49%; }
+    
+}
+
+@media screen and (max-width: 640px){
+
+    
 }
 
 /* main */
+
+
+.reward_wrap{
+    width: 100%;
+    height: 400px;
+}
+
+.reward_inner{
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+}
+
+
+/* 반응형 시작*/
+    /* 테블릿 */
+@media screen and (min-width: 641px) and (max-width: 960px){
+
+.header_wrap{
+    display: none;
+}
+
+.blankWrap{
+    height: 70px;
+}
+
+.tablet_wrap{
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #f6f5ef;
+    z-index: 9999;
+}
+
+.tablet_inner>.logo{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transform: none;
+    width: 45px;
+    height: 45px;
+}
+
+.tablet_inner>.logo>a{
+    background-size: 100%;
+}
+
+.tablet_gnb_btn{
+    float: right;
+    width: 185px;
+    height: 70px;
+}
+
+.tablet_gnb_btn>ul>li{
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 10px 0 0 1px;
+}
+
+.tablet_gnb_btn>ul>li>a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.tablet_gnb01>a{
+    width: 25px;
+    height: 30px;
+    background: url('../img/icon_user_m.png');   
+}
+
+.tablet_gnb02>a{
+    width: 24px;
+    height: 32px;
+    background: url('../img/icon_spot_m.png');   
+}
+
+.tablet_gnb03>a{
+    width: 28px;
+    height: 26px;
+    background: url('../img/btn_berger_m.png');   
+}
+
+.main_wrap{
+    height: 565px;
+}
+
+}
+    
+@media screen and (max-width: 760px){
+
+    .main_wrap{
+        height: 485px;
+    }
+
+
+
+}
+    /* 테블릿 */
+/* 반응형 끝*/
