@@ -350,7 +350,7 @@ img{
 .set_01::after{
     background-image: url('../img/main_visual_latte_tit.png');
     bottom: -17.2%;
-    left: 27%;
+    left: 27.5%;
     width: 50%;
     max-width: 213px;
     height: 50px;
@@ -359,7 +359,7 @@ img{
 
 .set_02::after{
     bottom: -25.4%;
-    left: 37%;
+    left: 37.5%;
     width: 51%;
     max-width: 221px;
     height: 95px;
@@ -403,7 +403,7 @@ img{
     max-width: 434px;
     z-index: 13;
 
-    bottom: 29.5%; left: 37.5%;
+    bottom: 29.5%; left: 38%;
 }
 
 .set_03{
@@ -436,6 +436,96 @@ img{
     top: 0; left: 47%;
 }
 
+.notice_wrap{
+    position: relative;
+    width: 100%;
+    height: 62px;
+}
+
+.notice_left_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    background: #000;
+}
+
+.notice_right_bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: #f6f5ef;
+}
+
+.notice_inner{
+    width: 1080px;
+    height: 62px;
+    position: relative;
+}
+
+.left_wrap{
+    position: relative;
+    float:left;
+    width: 55%;
+    height: 100%;
+    background: black;
+    padding: 10px;
+    padding: 23px;
+}
+
+.left_wrap h3{
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+}
+
+.news{
+    position: absolute;
+    
+}
+
+.news_rolling{
+    position: absolute;
+    width: 65%;
+    left: 85px;
+    top: 20px;
+    display: block;
+    height: 21px;
+    line-height: 21px; 
+    overflow: hidden;
+}
+
+.news_rolling>li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-indent: 5px;
+    background: #000;
+    top: 21px;
+}
+
+.news_rolling>li:first-child{
+    top: 0px;
+}
+
+.news_rolling>li>a{
+    font-size: 14px;
+    line-height: 21px; 
+    color: #fff;
+}
+
+.right_wrap{
+    position: relative;
+    float: right;
+    width: 45%;
+    height: 100%;
+    background: #f6f5ef;
+}
+
+
 @media screen and (max-width: 1130px){
 
     .main_slogan{ width: 46%; margin-left: 20px; 
@@ -462,6 +552,7 @@ img{
     .set_03:after { left:41%; width:49%; }
     
 }
+
 
 @media screen and (max-width: 640px){
 
