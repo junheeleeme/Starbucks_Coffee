@@ -1,13 +1,14 @@
 
 
+// gnb 메뉴 슬라이드
 $(".sub_gnb_inner>ul>li").hover(function(){
     $(this).siblings().children('.gnb_sub_wrap').css({display: 'none'});
     $(this).children('.gnb_sub_wrap').stop().slideToggle(400);
 })
 
 
+//메인 공지사항 롤링
 news_slide();
-
 
 function news_slide(){
 
@@ -26,3 +27,6 @@ function news_slide(){
     var rolling_start = setInterval(rolling, 2500);
 }
 
+$(".promotion_txt").click(function(){
+    $(".promotion_wrap").stop().slideToggle();
+})
