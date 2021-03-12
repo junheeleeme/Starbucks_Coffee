@@ -595,14 +595,18 @@ img{
 .slider_item{
     position: relative;
     width: 515%;
-    margin-left: 135px;
-    transform: translate3d(-829px, 0px, 0px);   /* 1658 */
+    margin-left: -696px;
+}
+
+.active{
+    opacity: 1 !important;
 }
 
 .slider_item>li{
     width: 819px;
     margin: 0 5px;
     float:left;
+    opacity: 0.22;
 }
 
 .slider_item a{
@@ -652,7 +656,7 @@ img{
 .slider_right_mask{
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0; 
     width: 131px;
     height: 553px;
     z-index: 10;
