@@ -5,10 +5,6 @@
     margin: 0 auto;
 }
 
-html{
-    display: block;
-}
-
 body{
     font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
     font-size: 1em;
@@ -16,6 +12,7 @@ body{
     line-height: 1;
     vertical-align: baseline;
     overflow-x: hidden;
+    min-width: 320px;
 }
 
 a{
@@ -40,10 +37,7 @@ img{
     max-width: 100%;
 }
 
-#starbucks{
-    position: relative;
-    width: 100%;
-}
+
 
 /* Header */
 
@@ -125,12 +119,18 @@ img{
   padding: 5px;
 }
 
-.sub_gnb{
+.sub_gnb_nav{
     position: absolute;
     top: 54px;
+    left: 0;
     height: 66px;
     width: 100%;
     border-bottom: 1px solid #e5e5e5;
+}
+
+.sub_gnb_wrap {
+    height: 66px;
+    width: 1100px;
 }
 
 .sub_gnb_inner{
@@ -170,7 +170,7 @@ img{
 .sub_gnb_inner>ul>li:hover{
     background: #2C2A29;
     text-decoration: underline;
-    cursor: pointer;
+    
 }
 
 .sub_gnb_inner>ul>li:hover h2>a{
@@ -189,6 +189,12 @@ img{
 
 }
 
+.gnb_sub{
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0 20px 0;
+}
+
 .gnb_sub_wrap{
     display: none;
     position: absolute;
@@ -197,12 +203,6 @@ img{
     width: 100%;
     background: #2C2A29;
     text-align: left;
-}
-
-.gnb_sub{
-    width: 100%;
-    display: inline-block;
-    padding: 20px 0;
 }
 
 .gnb_sub_inner{
@@ -282,9 +282,8 @@ img{
 /* main */
 
 .main_wrap{
-    width: 100%;
     height: 645px;
-    background: url('../img/main_visual_bg.jpg') no-repeat center / cover;
+    background: url('../img/main_visual_bg.jpg') no-repeat center / cover;    
 }
 
 .main_inner{
@@ -315,11 +314,11 @@ img{
 
 .slogan_btn>a{
     display: inline-block;
-    border: 2px solid #EA784C;
+    border: 2px solid #fff;
     border-radius: 5px;
     width: 100%;
     height: 100%;
-    color: #EA784C;
+    color: #fff;
     font-size: 14px;
     font-weight: bold;
     line-height: 35px; 
@@ -327,7 +326,8 @@ img{
 }
 
 .slogan_btn>a:hover{
-    background: #EA784C;
+    background: #935649;
+    border-color: #935649;
     text-decoration: underline;
     color: #fff;
 }
@@ -348,41 +348,31 @@ img{
 }
 
 .set_01::after{
-    background-image: url('../img/main_visual_latte_tit.png');
-    bottom: -17.2%;
-    left: 27.5%;
-    width: 50%;
-    max-width: 213px;
-    height: 50px;
+    width: 55%;
+    max-width: 182px;
+    height: 88px;
+    background-image: url('../img/2021_cherryblossom_chocolate_txt.png');
+
+    bottom: 27%; left: -36.6%;
     
 }
 
 .set_02::after{
-    bottom: -25.4%;
-    left: 37.5%;
-    width: 51%;
-    max-width: 221px;
-    height: 95px;
-    background-image: url('../img/main_visual_frappuccino_tit.png');
+    width: 77%;
+    max-width: 201px;
+    height: 89px;
+    background-image: url('../img/2021_cherryblossom_coldbrew_txt2.png');
+
+    bottom: 105.4%; left: 1.4%;
 }
 
-.set_03::after{
-    bottom: -9%;
-    left: 42%;
-    width: 51%;
-    max-width: 208px;
-    height: 73px;
-    background-image: url('../img/main_visual_lemonade_tit.png');
-}
+.set_03::after{  
+    width: 82%;
+    max-width: 220px;
+    height: 89px;
+    background-image: url('../img/2021_cherryblossom_blended_txt.png');
 
-.set_03::before{
-    right: 8%;
-    top: 10%;
-    width: 82px;
-    height: 82px;
-    background-image: url('../img/soldout_iconpng.png');
-    background-size: cover;
-    z-index: 0;
+    bottom: 105.8%; left: 2.9%;
 }
 
 .set_common a{
@@ -395,45 +385,46 @@ img{
     max-width: 432px;
     z-index: 15;
 
-    bottom: 17.5%; left: 17.8%;
+    bottom: 4.4%; left: 28.6%;
 }
 
 .set_02{
-    width: 41%;
-    max-width: 434px;
+    width: 25%;
+    max-width: 262px;
     z-index: 13;
 
-    bottom: 29.5%; left: 38%;
+    bottom: 11.3%; left: 54.7%;
 }
 
 .set_03{
+
+    width: 25%;
+    max-width: 268px;
     width: 39%;
-    max-width: 414px;
     z-index: 11;
 
-    bottom: 12.5%; right: 0.5%;
+    bottom: 7%; right: -0.9%;
 }
 
 .set_01 > a{
-    width: 60%;
-    height: 96%;
+    width: 44%;
+    height: 93%;
 
-    top: 0; left: 22%;
+    top: 0; left: 16%;
 }
 
 .set_02 > a{
-    width: 40%;
+    width: 80%;
     height: 94%;
-    z-index: 11;
-
-    top: 0; left: 44%;
+    
+    top: 0; left: 0%;
 }
 
 .set_03 > a{
-    width: 45%;
-    height: 84%;
+    width: 60%;
+    height: 95%;
 
-    top: 0; left: 47%;
+    top: 0; left: 11%;
 }
 
 .notice_wrap{
@@ -461,7 +452,7 @@ img{
 }
 
 .notice_inner{
-    width: 1080px;
+    max-width: 1080px;
     height: 62px;
     position: relative;
 }
@@ -562,22 +553,23 @@ img{
 }
 
 .promotion_wrap{
-    display: block;
+    display: none;
     position: relative;
-    max-width: 100%;
+    width: 100%;
     height: 658px;
     background: #f6f5ef;
     border-top: 1px solid #f6f5ef;
+    overflow: hidden;
 }
 
 .prom_swiper_slider{
-    position: relative;
+    position: absolute;
     left: 50%;
     margin-left: -550px;
     margin-top: 39px;
     width: 1100px;
     height: 553px;
-    border: 1px solid #000;
+    z-index: 20;
 }
 
 .slider_wrap{
@@ -589,13 +581,13 @@ img{
     width: 100%;
     height: 542px;
     text-align: center;
-    overflow: visible; /*모바일에선 hidden*/
 }
 
 .slider_item{
     position: relative;
     width: 515%;
-    margin-left: -696px;
+    left: -696px;
+    z-index: 5;
 }
 
 .active{
@@ -660,7 +652,6 @@ img{
     width: 131px;
     height: 553px;
     z-index: 10;
-    border: 1px solid #000;
 }
 
 .slider_right_mask a{
@@ -681,6 +672,47 @@ img{
     background-color: #fff;  
 }
 
+.slider_controller{
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+
+.slider_toggle{
+    display: inline-block;
+    width: 12px;
+    height: 15px;
+    background: url(../img/prom_stop.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.slider_toggle.on{
+    background-image: url(../img/prom_play.png) !important;
+}
+
+.select_box{
+    display: inline-block;
+}
+
+.slider_pick{
+    display: inline-block;
+    width: 15px;
+    height: 14px;
+    background-image: url(../img/prom_off.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer
+}
+
+.slider_pick.on{
+    background-image: url(../img/prom_on.png);
+}
+
 .reward_wrap{
     width: 100%;
     height: 1000px;
@@ -694,7 +726,35 @@ img{
 }
 
 
-/* 반응형 */
+/* 반응형 시작 */
+
+/* pc_nav 반응형 시작 */
+@media screen and (min-width: 641px) and (max-width: 1120px){
+    .header_inner{
+            height: 120px;
+    width: 100%;
+    }
+    .sub_gnb_wrap{
+        height: 66px;
+        width: 100%;
+    }
+    .sub_gnb_inner{
+        width: 100%;
+    }
+    .gnb_sub{
+        width: 100%;
+    }
+    .gnb_sub_inner{
+        float: left;
+        left: 20px;
+        margin-left: 0;
+        position: relative;
+        width: 100%;
+    }
+}
+/* pc_nav 반응형 끝 */
+
+
 
 @media screen and (max-width: 1130px){
 
@@ -724,21 +784,19 @@ img{
 }
 
 
-@media screen and (max-width: 640px){
-
-    
-}
-
 /* main */
 
 
 /* 반응형 시작*/
     /* 테블릿 */
+@media screen and (max-width: 960px){
+    .header_wrap{
+        display: none;
+    }
+}
+
 @media screen and (min-width: 641px) and (max-width: 960px){
 
-.header_wrap{
-    display: none;
-}
 
 .blankWrap{
     height: 70px;
