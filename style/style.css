@@ -508,6 +508,10 @@ img{
     color: #fff;
 }
 
+.news_rolling>li>a:hover{
+    text-decoration: underline;
+}
+
 .right_wrap{
     position: relative;
     float: right;
@@ -628,7 +632,6 @@ img{
     width: 131px;
     height: 553px;
     z-index: 10;
-    border: 1px solid #000;
 }
 
 .slider_left_mask a{
@@ -715,14 +718,264 @@ img{
 
 .reward_wrap{
     width: 100%;
-    height: 1000px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background: #1e3932;
+}
+
+div#reward_wrap{
+    position: relative;
+    width: 100%;
+    background-color: #1e3932;
 }
 
 .reward_inner{
     position: relative;
+    max-width: 1100px;
+    height: 100%;
+}
+
+.reward_logo{
+    position: relative;
+    display: inline-block;
+    width: 16.3%;
+    margin:0 35px 0 45px;
+}
+
+.reward_box{
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    width: 73%;
+    height: 150px;
+
+}
+
+.reward_text{
+    position: relative;
+    border-bottom: 1px solid #4b615b;
+    padding-bottom: 12px;
+    margin: 0 0px 22px 0px;
+}
+.reward_text h2{
+    line-height: 1.4;
+    margin-bottom: 12px;
+    font-size: 26px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.reward_text p{
+    font-size: 17px;
+    line-height: 1.4;
+    color: #fff;
+
+}
+
+.reward_btn{
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+.join{
+    border-radius: 5px;
+    background-color: #00704a;
+    color: #fff;
+    display: inline-block;
+    line-height: 36px;
+    height: 38px;
+    padding: 0px 18.5px;
+    font-size: 14px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.login{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    line-height: 36px;
+    height: 38px;
+    padding: 0px 18.5px;
+    font-size: 14px;
+    margin: 3px;
+    cursor: pointer;
+}
+.e_gift{
+    position: relative;
+
+    color: #fff;
+    font-size: 14px;
+}
+.e_gift p{
+    line-height: 20px;
+}
+
+.e_gift .e-giftBtn{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    padding: 0 22px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    height: 38px;
+    line-height: 36px;
+    color: #fff;
+}
+
+.reward_btn>a:hover, .e-giftBtn:hover {
+    text-decoration: underline;
+}
+
+.main_bean_wrap{
     width: 100%;
+    height: 572px;
+    background-image: url('../img/2021_spring_bean_bg.jpg');;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main_bean_inner{
+    position: relative;
     max-width: 1080px;
     height: 100%;
+}
+
+.bean_img{
+    position: absolute;
+    top: 13.2%;
+    left: 10%;
+    max-width: 524px;
+    width: 52%;
+    opacity: 1;
+    transition: 2.5s ease-in-out;
+}
+
+.bean_txt{
+    position: absolute;
+    top: 32.6%;
+    right: 13.7%;
+    max-width: 288px;
+    width: 30%;
+    opacity: 1;
+    transition: 2.85s ease-in-out;
+}
+
+.bean_detail_btn{
+    display: inline-block;
+    margin: 30px 2px 0 0;
+    width: 125px;
+    height: 38px;
+    z-index: 6;
+}
+
+.bean_detail_btn a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    line-height: 36px;
+    border: 2px solid #393b44;
+    border-radius: 5px;
+    color: #393b44;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.bean_detail_btn a:hover{
+    text-decoration: underline;
+    background-color: #231815;
+    color: #fff;
+}
+
+.reserve_wrap{
+    position: relative;
+    height: 400px;
+    background-image: url('../img/reserve_costarica_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.reserve_wrap:after{
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 319px;
+    height: 156px;
+    background-image: url('../img/reserve_costarica_bg_item.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.reserve_title{
+    position: relative;
+    padding-top: 124px;
+    padding-left: 24px;
+    max-width: 1080px;
+    width: 100%;
+}
+
+.reserve_visual{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: -1%;
+    width: 100%;
+    text-align: right;
+    opacity: 1;
+    transition: 2s ease;
+}
+
+.reserve_title img, .reserve_visual img{
+    width: auto;
+}
+
+.reserve_visual .reserve_visual-pc {
+    max-width: none;
+}
+
+
+.reserve_detail_btn_wrap{
+    position: relative;
+    max-width: 1080px;
+    width: 100%;
+    padding-left: 283px;
+    text-align: left;
+}
+
+.reserve_betail_btn{
+    display: inline-block;
+    width: 125px;
+    height: 38px;
+}
+
+.reserve_betail_btn>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #682c11;
+    border: 2px solid #682c11;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 36px;
+    text-align: center;    
+    transition: .8s ease;
+}
+
+.reserve_betail_btn>a:hover{
+    background: #682c11;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer{
+    height: 1000px;
 }
 
 

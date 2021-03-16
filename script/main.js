@@ -1,7 +1,40 @@
-$.easing.easeOutCirc = function (x, t, b, c, d) {
+$(window).scroll(function(){ //스크롤 이동 효과
+    const scrollTop = parseInt($(window).scrollTop());
+    
+    if(scrollTop > 0)
+        bean_show();
+    if(scrollTop < 1 )
+        bean_hide();
+    if(scrollTop > 500)
+        reserve_show();
+    if(scrollTop < 500)
+        reserve_hide();
+})
+
+/* main bean */
+
+function bean_show(){
+    $(".bean_img").css({left : "10%", opacity : "1"});
+    $(".bean_txt").css({right : "13.7%", opacity : "1"});
+};
+function bean_hide(){
+    $(".bean_img").css({left : "-100%", opacity : "0"});
+    $(".bean_txt").css({right : "-100%", opacity : "0"});
+};
+/* main bean */
+/* main reserve */
+function reserve_show(){
+    $(".reserve_visual").css({opacity : '1'});
+}
+
+function reserve_hide(){
+    $(".reserve_visual").css({opacity : '0'});
+}
+/* main reserve */
+
+$.easing.easeOutCirc = function (x, t, b, c, d) { //animation effect
         return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
 };
-
 
 
 // gnb 메뉴 슬라이드
@@ -30,7 +63,7 @@ function news_rolling(){
     }
     var rolling_start = setInterval(rolling, 2500);
 }
-
+//메인 공지사항 롤링
 
 /* 프로모션 슬라이드 */
 let prom_cnt = $(".slider_item>li").length;
@@ -240,4 +273,8 @@ function focus_effect(selected){ //슬라이드 이동 효과
     }
 }
 /* 슬라이드 관련 함수 끝 */
-/* 프로모션 슬라이드 */
+/* 프로모션 슬라이드 끝*/
+
+
+
+
