@@ -9,6 +9,10 @@ $(window).scroll(function(){ //스크롤 이동 효과
         reserve_show();
     if(scrollTop < 500)
         reserve_hide();
+    if(scrollTop > 900)
+        fav_show();
+    if(scrollTop < 900)
+        fav_hide();
 })
 
 /* main bean */
@@ -18,8 +22,8 @@ function bean_show(){
     $(".bean_txt").css({right : "13.7%", opacity : "1"});
 };
 function bean_hide(){
-    $(".bean_img").css({left : "-100%", opacity : "0"});
-    $(".bean_txt").css({right : "-100%", opacity : "0"});
+    $(".bean_img").css({left : "-10%", opacity : "0"});
+    $(".bean_txt").css({right : "-10%", opacity : "0"});
 };
 /* main bean */
 /* main reserve */
@@ -31,6 +35,17 @@ function reserve_hide(){
     $(".reserve_visual").css({opacity : '0'});
 }
 /* main reserve */
+/* main fav */
+function fav_show(){
+    $(".fav_txt1").css({left : "200px", opacity : '1'});
+    $(".fav_txt2").css({left : "92px", opacity : '1'});
+}
+
+function fav_hide(){
+    $(".fav_txt1").css({left : "-35%", opacity : '0'});
+    $(".fav_txt2").css({left : "-40%", opacity : '0'});
+}
+/* main fav */
 
 $.easing.easeOutCirc = function (x, t, b, c, d) { //animation effect
         return c * Math.sqrt(1 - (t=t/d-1)*t) + b;

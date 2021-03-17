@@ -116,7 +116,7 @@ img{
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 5px;
+  padding: 6px;
 }
 
 .sub_gnb_nav{
@@ -972,6 +972,81 @@ div#reward_wrap{
     background: #682c11;
     color: #fff;
     text-decoration: underline;
+}
+
+.fav_wrap{
+    position: relative;
+    height: 800px;
+    padding: 0;
+    background: url('../img/fav_prod_bg_new.jpg') center center fixed no-repeat #45434c;
+    background-size: auto 100%;
+}
+
+.fav_inner{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 1280px;
+    height: 100%;
+}
+
+.fav_txt1{
+    position: absolute;
+    top: 120px;
+    left: -35%;
+    width: 258px;
+    height: 204px;
+    opacity: 0;
+    background: url('../img/fav_prod_txt01.png') no-repeat;
+    transition: 2.2s ease-in-out;
+}
+
+.fav_txt2{
+    position: absolute;
+    top: 370px;
+    left: -40%;
+    width: 362px;
+    height: 156px;
+    opacity: 0;
+    background: url('../img/fav_prod_txt02.png') no-repeat;
+    transition: 2.6s ease-in-out;
+}
+
+.fav_detail_btn{
+    position: absolute;
+    top: 570px;
+    left: 328px;
+    width: 125px;
+    height: 38px;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    text-align: center;
+    transition: 0.6s ease;
+    cursor: pointer;
+}
+
+.fav_detail_btn a{
+    color: #fff;
+    font-size: 15px;
+    line-height: 35px;
+}
+
+.fav_detail_btn:hover{
+    background: #fff;
+}
+
+.fav_detail_btn:hover a{
+    color: #000;
+    text-decoration: underline;
+}
+
+.fav_img {
+    position: absolute;
+    top: 100px;
+    right: -10px;
+    width: 672px;
+    height: 458px;
 }
 
 .footer{
