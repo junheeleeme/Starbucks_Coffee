@@ -11,8 +11,12 @@ $(window).scroll(function(){ //스크롤 이동 효과
         reserve_hide();
     if(scrollTop > 900)
         fav_show();
-    if(scrollTop < 900)
-        fav_hide();
+    if(scrollTop < 2000)
+        reserve_hide();
+    if(scrollTop > 2000)
+        reserve_show();
+
+        console.log(scrollTop);
 })
 
 /* main bean */
@@ -22,8 +26,8 @@ function bean_show(){
     $(".bean_txt").css({right : "13.7%", opacity : "1"});
 };
 function bean_hide(){
-    $(".bean_img").css({left : "-10%", opacity : "0"});
-    $(".bean_txt").css({right : "-10%", opacity : "0"});
+    $(".bean_img").css({left : "-100%", opacity : "0"});
+    $(".bean_txt").css({right : "-100%", opacity : "0"});
 };
 /* main bean */
 /* main reserve */
@@ -46,6 +50,20 @@ function fav_hide(){
     $(".fav_txt2").css({left : "-40%", opacity : '0'});
 }
 /* main fav */
+/* RESERVE MAGAZINE */
+
+function reserve_show(){
+    $(".reserve_right>img").css({left : '0' , opacity : '1'});
+    $(".look-detail_btn").css({left : '0' , opacity : '1'});
+}
+
+function reserve_hide(){
+    $(".reserve_right>img").css({left : '100%' , opacity : '0'});
+    $(".look-detail_btn").css({left : '100%' , opacity : '0'});
+}
+
+/* RESERVE MAGAZINE */
+
 
 $.easing.easeOutCirc = function (x, t, b, c, d) { //animation effect
         return c * Math.sqrt(1 - (t=t/d-1)*t) + b;

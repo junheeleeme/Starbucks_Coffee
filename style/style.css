@@ -837,6 +837,7 @@ div#reward_wrap{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
 
 .main_bean_inner{
@@ -848,21 +849,21 @@ div#reward_wrap{
 .bean_img{
     position: absolute;
     top: 13.2%;
-    left: 10%;
+    left: -100%;
     max-width: 524px;
     width: 52%;
     opacity: 1;
-    transition: 2.5s ease-in-out;
+    transition: 2.1s ease-in-out;
 }
 
 .bean_txt{
     position: absolute;
     top: 32.6%;
-    right: 13.7%;
+    right: -100%;
     max-width: 288px;
     width: 30%;
     opacity: 1;
-    transition: 2.85s ease-in-out;
+    transition: 2.4s ease-in-out;
 }
 
 .bean_detail_btn{
@@ -980,6 +981,7 @@ div#reward_wrap{
     padding: 0;
     background: url('../img/fav_prod_bg_new.jpg') center center fixed no-repeat #45434c;
     background-size: auto 100%;
+    overflow: hidden;
 }
 
 .fav_inner{
@@ -999,7 +1001,7 @@ div#reward_wrap{
     height: 204px;
     opacity: 0;
     background: url('../img/fav_prod_txt01.png') no-repeat;
-    transition: 2.2s ease-in-out;
+    transition: left 2.1s ease-in-out;
 }
 
 .fav_txt2{
@@ -1010,7 +1012,7 @@ div#reward_wrap{
     height: 156px;
     opacity: 0;
     background: url('../img/fav_prod_txt02.png') no-repeat;
-    transition: 2.6s ease-in-out;
+    transition: left 2.4s ease-in-out;
 }
 
 .fav_detail_btn{
@@ -1047,6 +1049,92 @@ div#reward_wrap{
     right: -10px;
     width: 672px;
     height: 458px;
+}
+
+.reserveM_wrap{
+    position: relative;
+    overflow: hidden;
+}
+
+.reserveM_pc{
+    display: block;
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 90px 0;
+    font-size: 0;
+}
+
+.reserveM_pc>div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.reserveM_pc::after{
+    content: "";
+    position: absolute;
+    top: 61.8%;
+    left: 9.5%;
+    width: 95.3%;
+    height: 1px;
+    background-color: #cccccb;
+    z-index: 1;
+}
+
+.reserveM_pc::before{
+    content: "";
+    position: absolute;
+    left: 43.5%;
+    top: 136px;
+    width: 1px;
+    height: 64%;
+    background-color: #cccccb;
+    z-index: 1;
+}
+
+.reserve_left{
+    position: relative;
+    width: 38.5%;
+    padding-left: 3.5%;
+    z-index: 5;
+}
+
+.reserve_right{
+    width: 45.6%;
+    margin-left: 9.2%;
+    padding-right: 3.5%;
+    
+}
+
+.reserve_right>img{
+    position: relative;
+    left: 0;
+    margin-top: 32%;
+    opacity: 1;
+    transition: 2.3s ease;
+}
+
+.look-detail_btn{
+    position: absolute;
+    bottom: 31.5%;
+    left: 0;
+    width: 287px;
+    height: 17px;
+    margin-left: calc(50% - 25px);
+    box-sizing: border-box;
+    opacity: 1;
+    transition: background-color .8s;
+    cursor: pointer;
+    transition: 2.3s ease;
+}
+
+.look-detail_btn>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/btn_magazine_pc.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
 }
 
 .footer{
