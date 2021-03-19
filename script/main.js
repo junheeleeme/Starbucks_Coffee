@@ -13,8 +13,11 @@ $(window).scroll(function(){ //스크롤 이동 효과
         fav_show();
     if(scrollTop < 2000)
         reserve_hide();
-    if(scrollTop > 2000)
+        store_hide();
+    if(scrollTop > 2000){
         reserve_show();
+        store_show();
+    }   
 
         console.log(scrollTop);
 })
@@ -63,7 +66,21 @@ function reserve_hide(){
 }
 
 /* RESERVE MAGAZINE */
+/* STORE */
 
+function store_show(){
+    $(".store_txt1").css({'right' : '149px', 'opacity' : '1'});
+    $(".store_txt2").css({'right' : '168px',  'opacity' : '1'});
+    $(".store_btn").css({'right' : '405px',  'opacity' : '1'});
+}
+
+function store_hide(){
+    $(".store_txt1").css({'right' : '-100%', 'opacity' : '0'});
+    $(".store_txt2").css({'right' : '-100%',  'opacity' : '0'});
+    $(".store_btn").css({'right' : '-100%',  'opacity' : '0'});
+}
+
+/* STORE */
 
 $.easing.easeOutCirc = function (x, t, b, c, d) { //animation effect
         return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
