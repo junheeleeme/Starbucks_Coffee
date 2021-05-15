@@ -18,7 +18,6 @@ $(window).scroll(function(){ //스크롤 이동 효과
         reserve_show();
         store_show();
     }   
-
         console.log(scrollTop);
 })
 
@@ -130,9 +129,10 @@ let slide_timerId = 0;
 
 
 /* 슬라이드 버튼 클릭 & 호버 기능 시작 */
-$(".promotion_txt").click(function(){
+init();
 
-    $(".promotion_wrap").stop().slideToggle();
+function init(){
+    let toggle_btn = false;
 
     if(slide_timerId != 0){
         $(".btn_prom>img").attr('src', 'img/btn_prom_down.png');
@@ -143,6 +143,10 @@ $(".promotion_txt").click(function(){
         sliding_init();
         $(".btn_prom>img").attr('src', 'img/btn_prom_up.png');
     }
+}
+
+$(".promotion_txt").click(function(){
+    $(".promotion_wrap").stop().slideToggle();
 })
 
 $(".slider_left_mask>a").click(function(){
@@ -301,7 +305,6 @@ function fn_slide(x){ //슬라이드 이동 애니메이션
         }
         click_over = 1;
     });
-    console.log(slide_x);
 }
 
 function focus_effect(selected){ //슬라이드 이동 효과

@@ -463,14 +463,15 @@ img{
     width: 58.3%;
     height: 100%;
     background: black;
-    padding: 10px;
-    padding: 23px;
+    padding-left: 23px;
 }
 
 .left_wrap h3{
     display: inline-block;
     font-size: 16px;
     color: #fff;
+    height: 62px;
+    line-height: 62px;
 }
 
 .news{
@@ -557,7 +558,7 @@ img{
 }
 
 .promotion_wrap{
-    display: none;
+    display: block;
     position: relative;
     width: 100%;
     height: 658px;
@@ -1361,238 +1362,4 @@ div#reward_wrap{
 .effect{
     color: green !important;
     font-weight: bold;
-}
-
-/* 반응형 시작 */
-
-@media screen and (max-width: 960px){
-
-    .header_wrap{
-        display: none;
-    }
-}
-
-/* pc */
-@media screen and (min-width: 641px) and (max-width: 1120px){
-    .header_inner{
-        height: 120px;
-        width: 100%;
-    }
-    .sub_gnb_wrap{
-        height: 66px;
-        width: 100%;
-    }
-    .sub_gnb_inner{
-        width: 100%;
-    }
-    .gnb_sub{
-        width: 100%;
-    }
-    .gnb_sub_inner{
-        float: left;
-        left: 20px;
-        margin-left: 0;
-        position: relative;
-        width: 100%;
-    }
-    .footer_wrap{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 1130px){
-
-    .main_slogan{ 
-        width: 46%;
-        margin-left: 20px; 
-    }
-    .main_inner{
-        padding-top: 5%;
-    }
-    .slogan_btn{
-        left: 10%;
-    }
-
-    .set_01{ left: 13%;}
-    .set_02{ bottom: 27.5%; left: 32.5%;}
-    .set_03{ right: 6.5%; }
-
-}
-
-
-
-@media screen and (min-width:1024px) and (max-width: 1130px) {
-
-    .logo{
-        top: 55px;
-        left: 25px;
-    }
-
-    .main_slogan {
-        width: 46%;
-        margin-left: 20px;
-    }
-    .slogan_btn {
-        left: 13.3%;
-    }
-
-    .set_01 { 
-        left:20%;
-        width:40%;
-    }
-    .set_01:after { 
-        width:48%; 
-        bottom: 33%;
-    }
-    .set_02 { 
-        left: 50%;
-        bottom: 25.5%;
-        width:38%;
-    }
-    .set_02:after { 
-        top: 107%;
-    }
-    .set_03 { 
-        right: 2%; 
-        width:38%; 
-    }
-    .set_03:after { 
-        left: 0%;
-    }   
-}
-
-@media screen and (min-width: 660px) and (max-width: 1023px){
-
-    .main_slogan {
-        width: 35%;
-        margin-top: 10px;
-        margin-left: 30px;
-    }
-    .slogan_btn {
-        left: 13.5%;
-    }
-
-    .set_01 { 
-        left:22%;
-        width: 30%;
-    }
-    .set_01:after { 
-        width: 52%; 
-        bottom: 33%;
-    }
-    .set_02 { 
-        left: 52%;
-        bottom: 25.5%;
-        width: 23%;
-    }
-    .set_02:after { 
-        top: 103%;
-    }
-    .set_03 { 
-        right: 2%; 
-        width: 23%; 
-    }
-    .set_03:after { 
-        left: 0%;
-    }   
-
-    .left_wrap{
-        position: relative;
-        width: 45.3%;
-        padding: 23px 40px;
-    }
-    .right_wrap {
-        width: 55.7px;
-    }
-}
-
-
-    /* 테블릿 */
-    
-
-
-@media screen and (min-width: 641px) and (max-width: 960px){
-
-
-.blankWrap{
-    height: 70px;
-}
-
-.tablet_wrap{
-    display: block;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background: #f6f5ef;
-    z-index: 9999;
-}
-
-.logo{
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    transform: none;
-    width: 45px;
-    height: 45px;
-}
-
-.logo>a{
-    background-size: 100%;
-}
-
-.tablet_gnb_btn{
-    float: right;
-    width: 185px;
-    height: 70px;
-}
-
-.tablet_gnb_btn>ul>li{
-    position: relative;
-    float: left;
-    width: 60px;
-    height: 60px;
-    margin: 10px 0 0 1px;
-}
-
-.tablet_gnb_btn>ul>li>a{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: inline-block;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.tablet_gnb01>a{
-    width: 25px;
-    height: 30px;
-    background: url('../img/icon_user_m.png');   
-}
-
-.tablet_gnb02>a{
-    width: 24px;
-    height: 32px;
-    background: url('../img/icon_spot_m.png');   
-}
-
-.tablet_gnb03>a{
-    width: 28px;
-    height: 26px;
-    background: url('../img/btn_berger_m.png');   
-}
-
-.main_wrap{
-    height: 565px;
-}
-
-}
-    
-@media screen and (max-width: 760px){
-
-    .main_wrap{
-        height: 485px;
-    }
-
 }
