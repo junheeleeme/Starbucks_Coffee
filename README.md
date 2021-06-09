@@ -1,6 +1,6 @@
 # Starbucks_Coffee(Clone) for DeskTop
 
-## --> [Link](https://www.juni-official.com/starbucks
+### --> [Link](https://www.juni-official.com/starbucks
 
 ### Initial Screen
 
